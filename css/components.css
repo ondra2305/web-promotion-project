@@ -121,8 +121,6 @@
     color: #000;
   }
 
-.icon {}
-
 .icon--yellow {
     color: var(--yellow);
 }
@@ -137,7 +135,16 @@
     margin: 0;
 }
 
-.image {
+.imageContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.imageContainer--landing {
+    display: none;
+}
+
+.imageContainer__image {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -166,13 +173,52 @@
     .landing {
         display: flex;
     }
-    
+
+    .comparison {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin-right: auto;
+    }
+
     .comparisonBox {
+        width: 50%;
         display: flex;
     }
 
-    .comparisonBox .imageContainer, .comparisonBox .imageContainer .pointsBlock {
+    .comparisonBox > .imageContainer, .comparisonBox > .pointsBlock {
         width: 50%;
+    }
+
+    .landing__graphic {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .landing__graphic .imageContainer:last-child {
+        display: none;
+        visibility: none;
+    }
+
+    .imageContainer--landing {
+        display: initial;
+    }
+
+    .landing__text {
+        width: 50%;
+    }
+
+    .about {
+        display: flex;
+    }
+
+    .about > .imageContainer {
+        width: 30%;
+    }
+
+    .glide {
+        display: none;
     }
 }
 
@@ -183,14 +229,6 @@
 
     .header {
         width: 70vw;
-    }
-    
-    .comparison {
-        display: flex;
-    }
-
-    .comparisonBox {
-        display: flex;
     }
 
     .landing {
@@ -203,14 +241,22 @@
         background: var(--yellow);
         transform: skew(-30deg);
         top:0;
-        left:600px;
+        left:800px;
         right:0;
         bottom:0;
         z-index:-1;
+        width: 700px;
+        height: 500px;
     }
 
+    
     .landing__graphic {
         display: flex;
+    }
+
+    .landing__graphic .imageContainer:last-child {
+        display: initial;
+        visibility: visible;
     }
 
     .landing__text {

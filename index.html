@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/components.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.core.css">
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://unpkg.com/@glidejs/glide@3.5.2/dist/glide.min.js"></script>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,7 +27,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Cookie Consent by TermsFeed (https://www.TermsFeed.com) -->
+    <!-- Cookie Consent -->
     <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.0.0/cookie-consent.js" charset="UTF-8"></script>
     <script type="text/javascript" charset="UTF-8">
         document.addEventListener('DOMContentLoaded', function () {
@@ -41,17 +46,6 @@
         gtag('config', 'G-9EBHDWFJGT');
     </script>
     <!-- end of Google Analytics-->
-
-    <script>
-        function toggleNav() {
-            var nav = document.getElementById("navContainer");
-            if (nav.className === "navContainer") {
-            nav.classList.toggle("navContainer--responsive");
-            } else {
-            nav.className = "navContainer";
-            }
-        }
-    </script>
 </head>
 <body>
     <header class="header">
@@ -67,8 +61,8 @@
              </div>
             <ul class="nav hamburger-nav">
                 <li class="nav__navItem nav__navItem--active"><a href="#"><i class="fas fa-bolt"></i> Domů</a></li>
-                <li class="nav__navItem"><a href="#">Složení</a></li>
-                <li class="nav__navItem"><a href="#">Volt a Ampere</a></li>
+                <li class="nav__navItem"><a href="#slozeni">Složení</a></li>
+                <li class="nav__navItem"><a href="#volt-ampere">Volt a Ampere</a></li>
                 <li class="nav__navItem"><a href="#">Blog</a></li>
                 <li class="nav__navItem"><a href="#">O nás</a></li>
                 <li class="nav__navItem"><a href="#">Kontakt</a></li>
@@ -91,19 +85,36 @@
                             <p><i class="fas fa-heart"></i> 0% Kofeinu a dalších látek</p>
                             <p><i class="fas fa-coffee"></i> Náhrada kafe/energy drinků</p>
                         </div>
+                        <div class="cta"><a class="cta__button cta__button--inverted" href="#">Vyzkoušet</a></div>
                     </div>
                         <div class="landing__graphic">
-                            <figure class="imageContainer"><img class="image" src="./img/web/360/EFuel-Ampere_tp.png"></figure>
-                            <figure class="imageContainer"><img class="image" src="./img/web/360/EFuel-balení_transparent.png"></figure>
+                            <div class="glide">
+                                <div data-glide-el="track" class="glide__track">
+                                  <ul class="glide__slides">
+                                    <li class="glide__slide"><figure class="imageContainer imageContainer--big"><img class="imageContainer__image" src="./img/web/360/EFuel-Landing.png" srcset="./img/web/360/EFuel-Landing.png 360w, ./img/web/540/EFuel-Landing.png 540w, ./img/web/720/EFuel-Landing.png 720w" sizes="(min-width: 720px) 720px, (min-width: 540px) 540px, 360px" alt="Energy-Fuel promo"></figure></li>
+                                    <li class="glide__slide"><figure class="imageContainer"><img class="imageContainer__image" src="./img/web/360/EFuel-balení_transparent.png" srcset="./img/web/360/EFuel-balení_transparent.png 360w, ./img/web/540/EFuel-balení_transparent.png 540w, ./img/web/720/EFuel-balení_transparent.png 720w" sizes="(min-width: 720px) 720px, (min-width: 540px) 540px, 360px" alt="Energy-Fuel balení"></figure></li>
+                                  </ul>
+                                </div>
+                                <div class="glide__bullets" data-glide-el="controls[nav]">
+                                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                                  </div>
+                              </div>
+                              <figure class="imageContainer imageContainer--landing"><img class="imageContainer__image" src="./img/web/360/EFuel-Landing.png" srcset="./img/web/360/EFuel-Landing.png 360w, ./img/web/540/EFuel-Landing.png 540w, ./img/web/720/EFuel-Landing.png 720w" sizes="(min-width: 720px) 720px, (min-width: 540px) 540px, 360px" alt="Energy-Fuel promo"></figure>
+                              <figure class="imageContainer imageContainer--landing"><img class="imageContainer__image" src="./img/web/360/EFuel-balení_transparent.png" srcset="./img/web/360/EFuel-balení_transparent.png 360w, ./img/web/540/EFuel-balení_transparent.png 540w, ./img/web/720/EFuel-balení_transparent.png 720w" sizes="(min-width: 720px) 720px, (min-width: 540px) 540px, 360px" alt="Energy-Fuel balení"></figure>
                         </div>
                 </div>
-                <div class="cta"><a class="cta__button cta__button--inverted" href="#">Vyzkoušet</a></div>
             </section>
             <section id="slozeni">
-                <h2>Složení, chemie</h2>
-                <p>Náš produkt má 100% přírodní složení a neobsahuje
-                    cukr ani žádná barviva nebo konzervanty. Mezi hlavní složky patří vitamíny a extrakty z bylin.</p>
-                <div class="cta"><a class="cta__button" href="#">Více informací</a></div>
+                <div class="about">
+                    <div class="about__text">
+                        <h2>Složení, chemie</h2>
+                        <p>Náš produkt má 100% přírodní složení a neobsahuje
+                            cukr ani žádná barviva nebo konzervanty. Mezi hlavní složky patří vitamíny a extrakty z bylin.</p>
+                            <div class="cta"><a class="cta__button" href="#">Více informací</a></div>
+                    </div>
+                    <figure class="imageContainer"><img class="imageContainer__image" src="./img/web/360/EFuel-Pills.png" srcset="./img/web/360/EFuel-Pills.png 360w, ./img/web/540/EFuel-Pills.png 540w, ./img/web/720/EFuel-Pills.png 720w" sizes="(min-width: 720px) 720px, (min-width: 540px) 540px, 360px" alt="EFuel pilulky"></figure>
+                </div>
             </section>
             <section id="volt-ampere">
                 <h2>Volt + Ampere</h2>
@@ -113,7 +124,7 @@
                 </p>
                 <div class="comparison">
                     <div class="comparisonBox">
-                        <figure class="imageContainer"><img src="img/web/360/EFuel-Volt_tp.png" alt="EFuel Volt"></figure>
+                        <figure class="imageContainer"><img class="imageContainer__image" src="./img/web/360/EFuel-Volt_tp.png" srcset="./img/web/360/EFuel-Volt_tp.png 360w, ./img/web/540/EFuel-Volt_tp.png 540w, ./img/web/720/EFuel-Volt_tp.png 720w" sizes="(min-width: 720px) 720px, (min-width: 540px) 540px, 360px" alt="EFuel Volt"></figure>
                         <div class="pointsBlock">
                             <p><i class="fas fa-check icon icon--yellow"></i> Rychlý účinek</p>
                             <p><i class="fas fa-check icon icon--yellow"></i> Pomáhá soustředění</p>
@@ -123,7 +134,7 @@
                         </div>
                     </div>
                     <div class="comparisonBox">
-                        <figure class="imageContainer"><img src="img/web/360/EFuel-Ampere_tp.png" alt="EFuel Ampere"></figure>
+                        <figure class="imageContainer"><img class="imageContainer__image" src="./img/web/360/EFuel-Ampere_tp.png" srcset="./img/web/360/EFuel-Ampere_tp.png 360w, ./img/web/540/EFuel-Ampere_tp.png 540w, ./img/web/720/EFuel-Ampere_tp.png 720w" sizes="(min-width: 720px) 720px, (min-width: 540px) 540px, 360px" alt="EFuel Ampere"></figure>
                         <div class="pointsBlock">
                             <p><i class="fas fa-check icon icon--green"></i> Velké množství vitamínů</p>
                             <p><i class="fas fa-check icon icon--green"></i> Pomáhá zdraví i imunitě</p>
@@ -138,5 +149,32 @@
             <p>Made by Ondřej Svoboda, 2022</p> 
         </footer>
     </div>
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("navContainer");
+            if (nav.className === "navContainer") {
+            nav.classList.toggle("navContainer--responsive");
+            } else {
+            nav.className = "navContainer";
+            }
+        }
+    </script>
+	<script>
+        var glide = new Glide('.glide', {
+            type: 'carousel',
+            focusAt: 'center',
+            autoplay: 4000,
+            hoverpause: false,
+            breakpoints: {
+                540: {
+                    perView: 2
+                },
+                360: {
+                    perView: 1
+                }
+            }
+        })
+        glide.mount()
+        </script>
 </body>
 </html>
