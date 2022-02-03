@@ -1,4 +1,11 @@
-  .hamburger-nav ul {
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.hamburger-nav ul {
     visibility: initial;
   }
   
@@ -8,11 +15,11 @@
     position: relative;
     cursor: pointer;
   }
-
+  
   .hamburger a {
-      display: block;
-      width: 45px;
-      height: 35px;
+    display: block;
+    width: 45px;
+    height: 35px;
   }
   
   .hamburger-row {
@@ -39,7 +46,10 @@
   .hamburger span:nth-child(1) {
     top: 0px;
     transition: top ease-in-out 0.1s 0.15s, -webkit-transform 0.15s;
+    -webkit-transition: top ease-in-out 0.1s 0.15s, -webkit-transform 0.15s;
+    -o-transition: top ease-in-out 0.1s 0.15s, transform 0.15s;
     transition: top ease-in-out 0.1s 0.15s, transform 0.15s;
+    transition: top ease-in-out 0.1s 0.15s, transform 0.15s, -webkit-transform 0.15s;
     transition: top ease-in-out 0.1s 0.15s, transform 0.15s,
       -webkit-transform 0.15s;
     transition: top ease-in-out 0.1s 0.15s, transform 0.15s,
@@ -48,50 +58,57 @@
   
   .hamburger span:nth-child(2) {
     top: 15px;
+    -webkit-transition: visibility 0s 0.15s;
+    -o-transition: visibility 0s 0.15s;
     transition: visibility 0s 0.15s;
   }
   
   .hamburger span:nth-child(3) {
     bottom: 0px;
     transition: bottom ease-in-out 0.1s 0.15s, -webkit-transform 0.15s;
+    -webkit-transition: bottom ease-in-out 0.1s 0.15s, -webkit-transform 0.15s;
+    -o-transition: bottom ease-in-out 0.1s 0.15s, transform 0.15s;
     transition: bottom ease-in-out 0.1s 0.15s, transform 0.15s;
+    transition: bottom ease-in-out 0.1s 0.15s, transform 0.15s, -webkit-transform 0.15s;
     transition: bottom ease-in-out 0.1s 0.15s, transform 0.15s,
       -webkit-transform 0.15s;
     transition: bottom ease-in-out 0.1s 0.15s, transform 0.15s,
       -webkit-transform 0.15s;
   }
   
- .navContainer--responsive
-    .hamburger
-    span:nth-child(1) {
+  .navContainer--responsive .hamburger span:nth-child(1) {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     top: 15px;
     transition: top ease-in-out 0.1s, -webkit-transform 0.15s 0.1s;
+    -webkit-transition: top ease-in-out 0.1s, -webkit-transform 0.15s 0.1s;
+    -o-transition: top ease-in-out 0.1s, transform 0.15s 0.1s;
     transition: top ease-in-out 0.1s, transform 0.15s 0.1s;
+    transition: top ease-in-out 0.1s, transform 0.15s 0.1s, -webkit-transform 0.15s 0.1s;
     transition: top ease-in-out 0.1s, transform 0.15s 0.1s,
       -webkit-transform 0.15s 0.1s;
     transition: top ease-in-out 0.1s, transform 0.15s 0.1s,
       -webkit-transform 0.15s 0.1s;
   }
   
-  .navContainer--responsive
-    .hamburger
-    span:nth-child(2) {
+  .navContainer--responsive .hamburger span:nth-child(2) {
     visibility: hidden;
+    -webkit-transition: visibility 0s 0.1s;
+    -o-transition: visibility 0s 0.1s;
     transition: visibility 0s 0.1s;
   }
   
-  .navContainer--responsive
-    .hamburger
-    span:nth-child(3) {
+  .navContainer--responsive .hamburger span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     bottom: 15px;
     transition: bottom ease-in-out 0.1s, -webkit-transform 0.15s 0.1s;
+    -webkit-transition: bottom ease-in-out 0.1s, -webkit-transform 0.15s 0.1s;
+    -o-transition: bottom ease-in-out 0.1s, transform 0.15s 0.1s;
     transition: bottom ease-in-out 0.1s, transform 0.15s 0.1s;
+    transition: bottom ease-in-out 0.1s, transform 0.15s 0.1s, -webkit-transform 0.15s 0.1s;
     transition: bottom ease-in-out 0.1s, transform 0.15s 0.1s,
       -webkit-transform 0.15s 0.1s;
     transition: bottom ease-in-out 0.1s, transform 0.15s 0.1s,

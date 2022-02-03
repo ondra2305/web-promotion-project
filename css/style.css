@@ -1,42 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&family=Raleway:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&family=Raleway:wght@300;400;500;700&display=swap");
 
 :root {
-    font-family: 'Raleway', sans-serif;
-    font-weight: normal;
-    font-size: 18px;
-    --yellow: #ffff00;
-    --green: #44A617;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  --yellow: #ffff00;
+  --green: #44a617;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--yellow);
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--yellow);
 }
 
 h1 {
-    font-size: 48px;
-    margin: 1.5rem 0 1.5rem 0;
+  font-size: 48px;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 h2 {
-    font-size: 36px;
-    margin: 1rem 0 1rem 0;
+  font-size: 36px;
+  margin: 1rem 0 1rem 0;
 }
 
 h3 {
-    font-size: 24px;
-    margin: .75rem 0 .75rem 0;
+  font-size: 24px;
+  margin: 0.75rem 0 0.75rem 0;
 }
 
 body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 figure {
-    margin: 0;
+  margin: 0;
 }
 
 p {
-    margin: .5em 0 .5em 0;
+  margin: 0.5em 0 0.5em 0;
+}
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    padding: 0;
+  }
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    margin: 1.5rem 0 1.5rem 0;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin: 1rem 0 1rem 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 0.75rem 0 0.75rem 0;
+  }
 }
