@@ -15,6 +15,6 @@
 
 **Grafika:** https://pslib-my.sharepoint.com/:f:/g/personal/ondsvob018_pslib_cz/Eu-QqsAeoPFErsEHShrfWqkBwnfcV-4R_YhQFZ9WvmpzCQ?e=s7Hi4g
 
-![EFuel balení](/img/web/EFuel-balení.jpg)
+![EFuel balení](/img/web/1080/EFuel-balení_c.jpg)
 
-![EFuel reklama](/img/web/EFuel-Reklama2.jpg)
+![EFuel reklama](/img/web/1080/EFuel-Reklama2.jpg)
