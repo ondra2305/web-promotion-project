@@ -1,0 +1,100 @@
+  .hamburger-nav ul {
+    visibility: initial;
+  }
+  
+  .hamburger {
+    width: 45px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hamburger a {
+      display: block;
+      width: 45px;
+      height: 35px;
+  }
+  
+  .hamburger-row {
+    margin-right: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .hamburger span {
+    position: absolute;
+    height: 5px;
+    background: white;
+    border-radius: 4.5px;
+    left: 0;
+    width: 100%;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+  
+  .hamburger span:nth-child(1) {
+    top: 0px;
+    transition: top ease-in-out 0.1s 0.15s, -webkit-transform 0.15s;
+    transition: top ease-in-out 0.1s 0.15s, transform 0.15s;
+    transition: top ease-in-out 0.1s 0.15s, transform 0.15s,
+      -webkit-transform 0.15s;
+    transition: top ease-in-out 0.1s 0.15s, transform 0.15s,
+      -webkit-transform 0.15s;
+  }
+  
+  .hamburger span:nth-child(2) {
+    top: 15px;
+    transition: visibility 0s 0.15s;
+  }
+  
+  .hamburger span:nth-child(3) {
+    bottom: 0px;
+    transition: bottom ease-in-out 0.1s 0.15s, -webkit-transform 0.15s;
+    transition: bottom ease-in-out 0.1s 0.15s, transform 0.15s;
+    transition: bottom ease-in-out 0.1s 0.15s, transform 0.15s,
+      -webkit-transform 0.15s;
+    transition: bottom ease-in-out 0.1s 0.15s, transform 0.15s,
+      -webkit-transform 0.15s;
+  }
+  
+ .navContainer--responsive
+    .hamburger
+    span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 15px;
+    transition: top ease-in-out 0.1s, -webkit-transform 0.15s 0.1s;
+    transition: top ease-in-out 0.1s, transform 0.15s 0.1s;
+    transition: top ease-in-out 0.1s, transform 0.15s 0.1s,
+      -webkit-transform 0.15s 0.1s;
+    transition: top ease-in-out 0.1s, transform 0.15s 0.1s,
+      -webkit-transform 0.15s 0.1s;
+  }
+  
+  .navContainer--responsive
+    .hamburger
+    span:nth-child(2) {
+    visibility: hidden;
+    transition: visibility 0s 0.1s;
+  }
+  
+  .navContainer--responsive
+    .hamburger
+    span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 15px;
+    transition: bottom ease-in-out 0.1s, -webkit-transform 0.15s 0.1s;
+    transition: bottom ease-in-out 0.1s, transform 0.15s 0.1s;
+    transition: bottom ease-in-out 0.1s, transform 0.15s 0.1s,
+      -webkit-transform 0.15s 0.1s;
+    transition: bottom ease-in-out 0.1s, transform 0.15s 0.1s,
+      -webkit-transform 0.15s 0.1s;
+  }
+  

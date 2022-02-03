@@ -4,6 +4,13 @@
     width: 90vw;
 }
 
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    padding: 0;
+}
+
 .cta {
     border-right: 2px solid var(--yellow);
     border-bottom: 2px solid var(--yellow);
@@ -11,8 +18,8 @@
     box-sizing: content-box;
     height: max-content;
     padding: 0 8px 16px 0;
-    margin-top: .5em;
-    margin-bottom: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .cta__button {
@@ -45,36 +52,74 @@
 }
 
 .nav {
-    display: flex;
+    display: none;
     padding: 0;
     list-style: none;
     align-content: space-between;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
-.navItem {
-    padding: 1em;
+.nav__navItem {
+    margin: 1em;
+    box-sizing: border-box;
 }
 
-.navItem a {
+.nav__navItem:first-child {
+    margin-left: 0;
+}
+
+.navContainer--responsive .nav__navItem:first-child {
+    margin-left: 1em;
+}
+
+.nav__navItem a {
     text-decoration: none;
     color: #ffff;
     font-size: 24px;
+    display: block;
     width: 100%;
     height: 100%;
-    padding-bottom: 4px;
+    box-sizing: border-box;
+    padding-bottom: .75em;
     border-bottom: 2px solid transparent;
 }
 
-.navItem--active a {
+.nav__navItem--active a {
     border-bottom: 2px solid var(--yellow);
     color: var(--yellow);
 }
 
-.navItem a:hover {
+.nav__navItem a:hover {
     border-bottom: 2px solid var(--yellow);
     color: var(--yellow);
 }
+
+.navContainer--responsive .nav {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    background-color: #000;
+    color: #000;
+  }
+  
+  .navContainer--responsive .nav__navItem {
+    display: block;
+  }
+  
+  .navContainer--responsive .nav__navItem a {
+    text-align: left;
+  }
+  
+  .navContainer--responsive {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    color: #000;
+  }
 
 .icon {}
 
@@ -95,6 +140,7 @@
 .image {
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .pointsBlock {
@@ -107,7 +153,16 @@
     color: var(--yellow);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
+    .nav {
+        display: flex;
+    }
+
+    .hamburger-row {
+        display: none;
+        visibility: none;
+    }
+    
     .landing {
         display: flex;
     }
@@ -125,6 +180,10 @@
     .wrapper {
         width: 70vw;
     }
+
+    .header {
+        width: 70vw;
+    }
     
     .comparison {
         display: flex;
@@ -132,5 +191,29 @@
 
     .comparisonBox {
         display: flex;
+    }
+
+    .landing {
+        position: relative;
+    }
+
+    .landing::before {
+        content:"";
+        position:absolute;
+        background: var(--yellow);
+        transform: skew(-30deg);
+        top:0;
+        left:600px;
+        right:0;
+        bottom:0;
+        z-index:-1;
+    }
+
+    .landing__graphic {
+        display: flex;
+    }
+
+    .landing__text {
+        width: 50%;
     }
 }

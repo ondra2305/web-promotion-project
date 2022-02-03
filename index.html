@@ -5,38 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy-Fuel | Více než jen doplňek stravy</title>
+    <meta name="description" content="Více než jen doplněk stravy pro hráče.">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Cookie Consent by TermsFeed (https://www.TermsFeed.com) -->
+    <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.0.0/cookie-consent.js" charset="UTF-8"></script>
+    <script type="text/javascript" charset="UTF-8">
+        document.addEventListener('DOMContentLoaded', function () {
+        cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"dark","language":"cs","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"Energy-Fuel test"});
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/plain" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-9EBHDWFJGT"></script>
+    <script type="text/plain" cookie-consent="tracking">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9EBHDWFJGT');
+    </script>
+    <!-- end of Google Analytics-->
+
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("navContainer");
+            if (nav.className === "navContainer") {
+            nav.classList.toggle("navContainer--responsive");
+            } else {
+            nav.className = "navContainer";
+            }
+        }
+    </script>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
+    <header class="header">
+        <nav id="navContainer" class="navContainer">
             <div class="hamburger-row">
-                <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-            </div>
-            <nav class="navContainer hamburger-nav hamburger-zone">
-                <ul class="nav">
-                    <li class="navItem navItem--active"><a href="#"><i class="fas fa-bolt"></i> Domů</a></li>
-                    <li class="navItem"><a href="#">Složení</a></li>
-                    <li class="navItem"><a href="#">Volt a Ampere</a></li>
-                    <li class="navItem"><a href="#">Blog</a></li>
-                    <li class="navItem"><a href="#">O nás</a></li>
-                    <li class="navItem"><a href="#">Kontakt</a></li>
-                </ul>
-            </nav>
-        </header>
+                <div class="hamburger">
+                   <a href="javascript:void(0)" onclick="toggleNav()">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   </a>
+                </div>
+             </div>
+            <ul class="nav hamburger-nav">
+                <li class="nav__navItem nav__navItem--active"><a href="#"><i class="fas fa-bolt"></i> Domů</a></li>
+                <li class="nav__navItem"><a href="#">Složení</a></li>
+                <li class="nav__navItem"><a href="#">Volt a Ampere</a></li>
+                <li class="nav__navItem"><a href="#">Blog</a></li>
+                <li class="nav__navItem"><a href="#">O nás</a></li>
+                <li class="nav__navItem"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
         <main>
             <section id="home">
-                <h1>Energy-Fuel <i class="fas fa-bolt"></i></h1>
                 <div class="landing">
                     <div class="landing__text">
+                        <h1>Energy-Fuel <i class="fas fa-bolt"></i></h1>
                         <p class="slogan">Více než jen doplňek stravy pro hráče</p>
                         <p>Životabudič a ideální náhrada kafe nebo energydrinků
                             nejen pro hráče ve formě cucacích pilulek. Rychlé doplnění energie pro ty nejdelší herní sezení ale i pro poslední noc před deadlinem plnou stresu. Zlepšuje soustředění a reflexy. To vše v přírodním podání je Energy-Fuel.
@@ -60,7 +104,6 @@
                 <p>Náš produkt má 100% přírodní složení a neobsahuje
                     cukr ani žádná barviva nebo konzervanty. Mezi hlavní složky patří vitamíny a extrakty z bylin.</p>
                 <div class="cta"><a class="cta__button" href="#">Více informací</a></div>
-                <figure class="imageContainer"><img class="image" src=""></figure>
             </section>
             <section id="volt-ampere">
                 <h2>Volt + Ampere</h2>
