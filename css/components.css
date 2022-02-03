@@ -1,0 +1,136 @@
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+}
+
+.cta {
+    border-right: 2px solid var(--yellow);
+    border-bottom: 2px solid var(--yellow);
+    display: inline-block;
+    box-sizing: content-box;
+    height: max-content;
+    padding: 0 8px 16px 0;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.cta__button {
+    background-color: var(--yellow);
+    color: #000;
+    text-decoration: none;
+    border: 2px solid var(--yellow);
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.cta__button--inverted {
+    color: var(--yellow);
+    background-color: #000;
+}
+
+.cta__button:hover {
+    background-color: #000;
+    color: var(--yellow);
+}
+
+.cta__button--inverted:hover {
+    background-color: var(--yellow);
+    color: #000;
+}
+
+.nav {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    align-content: space-between;
+    font-weight: bold;
+}
+
+.navItem {
+    padding: 1em;
+}
+
+.navItem a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.navItem--active a {
+    border-bottom: 2px solid var(--yellow);
+    color: var(--yellow);
+}
+
+.navItem a:hover {
+    border-bottom: 2px solid var(--yellow);
+    color: var(--yellow);
+}
+
+.icon {}
+
+.icon--yellow {
+    color: var(--yellow);
+}
+
+.icon--green {
+    color: var(--green);
+}
+
+.slogan {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.pointsBlock {
+    font-weight: bold;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.pointsBlock--landing {
+    color: var(--yellow);
+}
+
+@media screen and (min-width: 768px) {
+    .landing {
+        display: flex;
+    }
+    
+    .comparisonBox {
+        display: flex;
+    }
+
+    .comparisonBox .imageContainer, .comparisonBox .imageContainer .pointsBlock {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .wrapper {
+        width: 70vw;
+    }
+    
+    .comparison {
+        display: flex;
+    }
+
+    .comparisonBox {
+        display: flex;
+    }
+}
