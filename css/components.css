@@ -106,12 +106,12 @@
   .navContainer--responsive .nav {
     display: block;
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 0;
     right: 0;
     z-index: 999999;
-    background-color: #000;
-    color: #000;
+    background-color: var(--yellow);
+    padding-top: 1em;
   }
   
   .navContainer--responsive .nav__navItem {
@@ -120,6 +120,13 @@
   
   .navContainer--responsive .nav__navItem a {
     text-align: left;
+    color: #000;
+  }
+
+  .navContainer--responsive .nav__navItem a:hover,  .navContainer--responsive .nav__navItem--active {
+    text-align: left;
+    color: #000;
+    border-bottom: 2px solid #000;
   }
   
   .navContainer--responsive {
@@ -128,6 +135,7 @@
     z-index: 2;
     color: #000;
   }
+
   
   .icon--yellow {
     color: var(--yellow);
@@ -151,6 +159,10 @@
   .imageContainer--landing {
     display: none;
   }
+
+  .imageContainer--big {
+    display: none;
+  }
   
   .imageContainer__image {
     width: 100%;
@@ -169,6 +181,50 @@
   .pointsBlock--landing {
     color: var(--yellow);
   }
+
+  .ad {
+    background-image: url(../img/web/1080/EFuel-Reklama2.jpg);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.copyright {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1em 0 1em 0;
+    color: var(--yellow)
+}
+
+  @media screen and (min-width: 768px) {
+    .landing {
+        display: block;
+    }
+
+    .navContainer--responsive .nav__navItem {
+        margin-left: 3em;
+      }
+
+    .comparisonBox {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .comparisonBox > .imageContainer {
+        width: 50%;
+    }
+
+    .about {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .imageContainer--big {
+        display: initial;
+      }
+  }
   
   @media screen and (min-width: 1024px) {
     .nav {
@@ -179,7 +235,7 @@
   
     .hamburger-row {
       display: none;
-      visibility: none;
+      visibility: hidden;
     }
   
     .landing {
@@ -223,14 +279,13 @@
   
     .landing__graphic .imageContainer:last-child {
       display: none;
-      visibility: none;
+      visibility: hidden;
     }
   
     .imageContainer--landing {
       display: initial;
-      transform: scale(2);
       position: relative;
-      left: 500px;
+      left: 100px;
     }
   
     .landing__text {
@@ -242,26 +297,21 @@
       display: -ms-flexbox;
       display: flex;
     }
+
+    .about__text {
+        width: 50%;
+    }
+
+    .promoText {
+        width: 50%;
+    }
   
     .about > .imageContainer {
-      width: 30%;
+      width: 25%;
     }
   
     .glide {
       display: none;
-    }
-
-    .ad {
-        background-image: url(../img/web/1080/EFuel-Reklama2.jpg);
-        height: 600px;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    .copyright {
-        font-size: 20px;
-        margin: 1em 0 1em 0;
-        color: var(--yellow)
     }
   }
   
@@ -285,13 +335,13 @@
       -webkit-transform: skew(-30deg);
           -ms-transform: skew(-30deg);
               transform: skew(-30deg);
-      top: 0;
+      top: -200px;
       left: 800px;
       right: 0;
       bottom: 0;
       z-index: -1;
-      width: 700px;
-      height: 500px;
+      width: 800px;
+      height: 700px;
     }
   
     .landing__graphic {
@@ -304,13 +354,33 @@
       display: initial;
       visibility: visible;
     }
+
+    .imageContainer--landing {
+        display: initial;
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
+        position: relative;
+        left: 100px;
+        z-index: 1;
+      }
+
+      .imageContainer--big {
+        display: initial;
+        -webkit-transform: scale(2);
+            -ms-transform: scale(2);
+                transform: scale(2);
+        position: relative;
+        left: 100px;
+        z-index: 2;
+      }
   
     .landing__text {
       width: 50%;
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     .wrapper {
       width: 60vw;
     }
